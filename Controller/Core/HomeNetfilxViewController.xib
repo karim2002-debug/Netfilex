@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeNetfilxViewController" customModule="Netfilex_APP_Using_Xibs" customModuleProvider="target">
+            <connections>
+                <outlet property="HeaderImageView" destination="kNq-Kh-eNs" id="uwb-Zg-53g"/>
+                <outlet property="downloadButton" destination="9MN-LH-Yk1" id="tTy-YE-0hY"/>
+                <outlet property="playButton" destination="Lke-rJ-qG8" id="ub2-Ch-eFc"/>
+                <outlet property="tableView" destination="asz-Ro-x43" id="tdq-Bz-XyO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="asz-Ro-x43">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="9tO-Rc-SEo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="435"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kNq-Kh-eNs">
+                                <rect key="frame" x="0.0" y="3" width="390" height="430"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="9sH-2I-Lnf">
+                                <rect key="frame" x="78" y="358" width="235" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lke-rJ-qG8">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Play">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playButton:" destination="-1" eventType="touchUpInside" id="kwp-EK-nFt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MN-LH-Yk1">
+                                        <rect key="frame" x="134" y="0.0" width="101" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Downlaod">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="downloadButton:" destination="-1" eventType="touchUpInside" id="bHS-KJ-EUc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9sH-2I-Lnf" firstAttribute="leading" secondItem="9tO-Rc-SEo" secondAttribute="leading" constant="78" id="GqF-25-y67"/>
+                            <constraint firstAttribute="trailing" secondItem="kNq-Kh-eNs" secondAttribute="trailing" id="Gsl-Sz-qgN"/>
+                            <constraint firstAttribute="bottom" secondItem="9sH-2I-Lnf" secondAttribute="bottom" constant="42.670000000000002" id="NvE-As-IdR"/>
+                            <constraint firstItem="kNq-Kh-eNs" firstAttribute="top" secondItem="9tO-Rc-SEo" secondAttribute="top" id="afm-ah-663"/>
+                            <constraint firstItem="kNq-Kh-eNs" firstAttribute="leading" secondItem="9tO-Rc-SEo" secondAttribute="leading" id="h3h-2f-O5V"/>
+                            <constraint firstAttribute="bottom" secondItem="kNq-Kh-eNs" secondAttribute="bottom" id="t6m-WN-79g"/>
+                            <constraint firstAttribute="trailing" secondItem="9sH-2I-Lnf" secondAttribute="trailing" constant="77" id="tr2-t7-92e"/>
+                        </constraints>
+                    </view>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="asz-Ro-x43" secondAttribute="bottom" id="4GN-ZJ-HNY"/>
+                <constraint firstItem="asz-Ro-x43" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8lf-4E-sbk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="asz-Ro-x43" secondAttribute="trailing" id="I8h-EO-EQY"/>
+                <constraint firstItem="asz-Ro-x43" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ccK-Qn-ut5"/>
+            </constraints>
+            <point key="canvasLocation" x="49.230769230769226" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
